@@ -3,7 +3,13 @@
   margin: 0;
   border: 1px solid red;
 }
-
+body {
+  background-image: url(./imagenes/immune2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 header {
   display: grid;
   grid: auto / 1fr;
@@ -60,7 +66,7 @@ nav a:hover {
 }
 
 .quien_soy {
-  height: 400px;
+  heigh: auto;
   width: 80%;
   margin: auto;
 }
@@ -75,7 +81,7 @@ nav a:hover {
   align-items: center;
   background-color: rgba(8, 8, 115, 0.5);
   border-radius: 7px;
-  height: 100%;
+  height: 400px;
 }
 
 .container__soy img {
@@ -89,16 +95,54 @@ nav a:hover {
   margin: 1rem;
   font-size: 20px;
 }
-/* AQUI HE TENDIO QUE PONER UN MARGIN TOP PORQUE LA SECTION CON EL QUIEN SOY Y EL ESTUDIOS SE ME SOBRE PONIA Y NO SE PORQUE */
+
 .estudios {
-  margin-top: 100px;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  
 }
 
 .estudios__programacion {
+  height: 500px;
   width: 65%;
-  height: 400px;
+  min-width: 65%;
   background-image: url(./imagenes/codigo-foto.jpg);
   background-size: cover;
   background-position: 20%;
   margin: 20px;
+  justify-content: center;
+  border-radius: 8px;
 }
+
+.estudios__gris {
+  background-image: url(./imagenes/grey-pattern.png);
+  height: 370px;
+  width: 42%;
+  min-width: 42%;
+  left: -170px;
+  flex-shrink: 0;
+  position: relative;
+  justify-content: center;
+  bottom: -170px;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 24px;
+  }
+
+  .estudios__gris h1 {
+    font-weight: 200;
+  }
+
+  .estudios__gris a {
+    text-decoration: none;
+    padding: 10px;
+    width: 120px;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+  }
