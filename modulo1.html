@@ -15,11 +15,11 @@
   </head>
   <body>
     <header>
+      <!-- TAMBIEN QUERIA HACER QUE EL NAVBAR SE SOBRE PUSIERA UN POCO LA FOTO DE DEBAJO Y QUE LA FOTO SE DIFUMINARA ESTILO FADE HACIA ARRIBA PERO NO SUPE HACERLO =( -->
       <nav>
-        <a href="">Quien Soy</a>
-        <a href="">Estudios</a>
-        <a href="">Proyectos</a>
-        <a href="">Concatáctame</a>
+        <a href="#quien_soy">Quién Soy</a>
+        <a href="#studies">Estudios</a>
+        <a href="#">Contáctame</a>
       </nav>
       <div class="titulo">
         <div class="titulo__letras">
@@ -36,29 +36,26 @@
     <!-- AQUI TENEMOS LA PRIMERA TARJETA CON EL QUIEN SOY -->
       <section class="quien_soy">
         <div class="quienSoy__titulo">
-          <h1>¿Quién Soy?</h1>
+          <h1 id="quien_soy">¿Quién Soy?</h1>
         </div>
         <div class="container__soy">
           <div class="info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum consequuntur incidunt accusantium ad necessitatibus, aspernatur molestiae, atque maiores dicta odit vitae eum. Corporis vero impedit distinctio modi cum minus dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt assumenda impedit atque ipsum ex cum dolorum necessitatibus qui quam iste, debitis odit possimus unde placeat magni soluta temporibus inventore?
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem minima explicabo repellendus nostrum. Cumque dicta maiores hic esse voluptas pariatur sunt laborum deleniti, at sapiente numquam vero eligendi incidunt?
-                
-              </p>
-            </p>
+          <p>Voy a aprovechar para utilizar este espacio de texto para hablar un poco sobre mi página. Me he topado con varios problemas, que algunos los he dejado comentados porque no he logrado terminarlos o solucionarlos, asique porfavor chequea los comentarios de las distintas secciones del codigo ^^. También como podras ver no lo he subido a la web por qué no quería crearme ahora un dominio, sobre todo para esto...</p>
+          <p>Pero he intentado aplicar todo lo "aprendido" contigo, he intentado que quedara lo más bonito posible, pero no soy diseñador y támpoco diría que tengo buen ojo "artístico" pero aún así espero que te gusto, le he metido muchas horas (más de las que tenía pensado echarle)</p>
           </div>
-          <div><img src="./imagenes/rick5.png" alt="foto-perfil" />
+          <div class="fotoperfil"><img src="./imagenes/rick5.png" alt="foto-perfil" />
           </div>
         </div>
       </section>
 
       <!-- AQUI VA LA ZONA GRIS CON LOS ESTUDIOS -->
       <section class="estudios">
-        <div class="estudios__programacion"></div>
+        <div id="studies" class="estudios__programacion"></div>
         <div class="estudios__gris">
           <h3>SIN ESTUDIOS, PERO ESTUDIANDO</h3>
           <p>Pero eso no significa que no me los estoy sacando, ahora mismo estoy realizando un master con Immune.</p>
-            <a  href="https://immune.institute/" target="_blank">Ver más</a>
+            <div class="btn__gris"><a  href="https://immune.institute/" target="_blank">Ver más</a></div>
+            <!-- AQUI TIENES QUE HACER EL EFECTO DEL BOTON -->
         </div>
         <!-- SI TIENES TIEMPO PON ALGO MAS SINO ELIMINALO -->
       <!-- </section>
@@ -68,24 +65,24 @@
     <!-- VAMOS A CON EL FOOTER -->
     <footer>
         <div class="social">
-          <div class="hover-div instagram"><a class="insta" href="#"><i class="icon ion-social-instagram"></i></a
+          <div class="hover-div instagram"><a class="insta" target="_blank" href="https://www.instagram.com/immuneinstitute/"><i class="icon ion-social-instagram"></i></a
           ></div>
           <div class="hover-div wasssa"><a class="wassa" href="#"><i class="icon ion-social-whatsapp"></i></a
           ></div>
-          <div class="hover-div facebook"><a class="fbook" href="#"><i class="icon ion-social-facebook"></i></a></div>
+          <div class="hover-div facebook"><a class="fbook" target="_blank" href="https://www.facebook.com/immune.institute/"><i class="icon ion-social-facebook"></i></a></div>
         </div>
         <!-- PABLO, AQUI HE TENIDO UN PROBLEMA, HE QUERIDO HACER QUE CUANDO SE HOVER SOBRE LOS ICONOS SOCIALES, APARECIESE UN TEXTO AL LADO. ME HE ESTADO COMIENDO LA CABEZA Y NO HE PODIDO HACERLO T_T. SI POR FAVOR SABES COMO HACERLO TE LO AGRADECERIA MUCHO -->
         <div class="menu">
           <ul>
-            <li><a href="">Quien Soy</a></li>
-            <li><a href="">Estudios</a></li>
-            <li><a href="">Proyectos</a></li>
-            <li><a href="">Contactame</a></li>
+            <li><a href="#quien_soy">Quién Soy</a></li>
+            <li><a href="#studies">Estudios</a></li>
+            <li><a href="">Contáctame</a></li>
           </ul>
         </div>
         <div class="immune">
           <a href="https://immune.institute/" target="_blank"><img src="./imagenes/immune3.jpg" alt="immune" /></a>
         </div>
+        <!-- TAMBIEN QUIERO PUNTUAR QUE HE DEJADO UN ESPACIO A PROPÓSITO ENTRE EL FOOTER Y EL ULTIMO CONTENIDO PARA QUE SE PUDIESE APRECIAR EL TEXTO DEL BACKGROUND ;)  -->
       <div class="copyright">
         <p>Copyright &copy; 2024. Todos los derechos reservados, asi que nada de copiar.</p>
       </div>

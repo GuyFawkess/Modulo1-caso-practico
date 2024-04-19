@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Pacifico&display=swap');
-/* para usarlo: "Jersey 10" */
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap");
 /* para usarlo: "Open Sans" */
-
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap");
 /* para usarlo: "Bitter" */
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap");
+/* para usarlo: "Oswald" */
+:root {
+  --color-ppal: #0a6300;
+}
 
 * {
   padding: 0;
   margin: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 body {
   background-image: url(./imagenes/immune2.png);
@@ -21,8 +20,22 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-p{
-  font-family: 'Bitter', 'sans-serif';
+p {
+  font-family: "Bitter", "sans-serif";
+}
+a {
+  font-family: "Open Sans", "sans-serif";
+}
+a:visited,
+a:link {
+  color: black;
+}
+a:focus {
+  color: var(--color-ppal);
+}
+
+h1 {
+  font-family: "Oswald", "sans-serif";
 }
 
 header {
@@ -36,17 +49,29 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 8px;
+  background: rgb(6, 6, 35);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 6, 35, 0.8) 0%,
+    rgba(255, 255, 255, 0.877) 5%
+  );
 }
 
 nav a {
   text-decoration: none;
   padding: 10px;
   margin: 5px;
+  border: 0.5px solid var(--color-ppal);
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(19, 71, 202, 0.509);
+  background-color: rgba(10, 99, 0, 0.629);
+  color: white;
+  border-radius: 5px;
+  background: var(--color-ppal);
+  box-shadow: inset 10px 10px 20px #095400, inset -10px -10px 20px #0c7200;
 }
 /* LA PRIMERA TARJETA INICIAL */
 .titulo {
@@ -76,6 +101,7 @@ nav a:hover {
 
 .titulo__letras h1 {
   margin-bottom: 25px;
+  -webkit-text-stroke: 1px var(--color-ppal);
 }
 .titulo__letras p {
   font-size: 24px;
@@ -88,34 +114,46 @@ nav a:hover {
   margin: auto;
 }
 
+/* AQUI EL WEBKIT ES PARA PONER BORDER A LAS LAETRAS */
+
 .quienSoy__titulo {
-  font-family: 'Jersey 10', 'sans-serif';
-  font-size: 40px;
+  font-size: 30px;
+  -webkit-text-stroke: 0.8px black;
   text-align: center;
-  color: rgb(189, 173, 0);
+  color: rgb(10, 99, 0);
   width: 280px;
+  border-radius: 10px;
   min-width: auto;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
+  background-color: #ffffff61;
 }
 
 .container__soy {
   display: flex;
   align-items: center;
-  background-color: rgba(8, 8, 115, 0.5);
-  backdrop-filter: blur(10px);
+  background-color: rgba(21, 21, 63, 0.615);
+  backdrop-filter: blur(20px);
   border-radius: 7px;
-  height: 400px;
+  height: auto;
+  color: white;
 }
 .info {
-  margin: 1rem;
+  margin: 2rem;
   font-size: 20px;
+  width: auto;
+  height: auto;
 }
 
-.container__soy img {
+.info p {
+  margin: 10px;
+}
+
+.fotoperfil img {
   height: 200px;
   width: 200px;
   border-radius: 50% 50%;
   margin: 20px;
+  transform: scaleX(-1);
 }
 
 /* LA SECTION DE LOS ESTUDIOS */
@@ -126,7 +164,7 @@ nav a:hover {
   width: 100%;
 }
 .estudios h3 {
-  text-align:center;
+  text-align: center;
 }
 .estudios__programacion {
   height: 500px;
@@ -167,17 +205,31 @@ nav a:hover {
   padding: 10px;
   width: 120px;
   display: flex;
-  background-color: #fff;
   justify-content: center;
+  background: linear-gradient(to right, rgb(10, 99, 0) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+  color: black;
+}
+
+.estudios__gris a:hover {
+  color: white;
+  background-position: left bottom;
 }
 
 /* EL FOOTER */
 
 footer {
-  margin-top: 200px;
+  margin-top: 380px;
   display: grid;
   grid: 1fr auto / 1fr 1fr 1fr;
-background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1) 0%, rgba(255,255,255,1) 90%);
+  background: rgb(67, 67, 67);
+  background: linear-gradient(
+    0deg,
+    rgba(67, 67, 67, 1) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
 }
 
 /* LOS ICONOS */
@@ -221,9 +273,7 @@ background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1)
   opacity: 0;
   transition: opacity 0.5s ease-out;
   color: rgb(203, 14, 127);
-  
 }
-
 
 .facebook::after {
   content: "Facebook";
@@ -248,7 +298,6 @@ background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1)
   visibility: visible;
   opacity: 1;
 }
-
 
 .social .insta:hover {
   background: -webkit-linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
@@ -283,17 +332,20 @@ background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1)
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 .menu li {
   text-decoration: none;
   list-style: none;
   padding: 2px;
-
 }
 .menu li > a {
   text-decoration: none;
   font-size: 20px;
+}
+
+.menu li > a:hover {
+  color: var(--color-ppal);
+  -webkit-text-stroke: 0.2px white;
 }
 /* LA FOTO DE IMMUNE */
 .immune {
@@ -306,7 +358,7 @@ background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1)
   padding: 10px;
 }
 .immune a {
-  border-radius: 50%   ;
+  border-radius: 50%;
 }
 .immune img {
   width: auto;
@@ -320,4 +372,37 @@ background: rgb(67,67,67);    background: linear-gradient(0deg, rgba(67,67,67,1)
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+
+
+/* BUENO AQUI YA VAMOS CON EL TAMAÑO, LO VOY A EDITAR SOLO PAR AUN TAMAÑO */
+
+@media  screen and (max-width: 800px) {
+  .container__soy {
+    flex-flow: column-reverse wrap;
+  }
+  .titulo {
+    height: auto;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+  
+@media screen and (max-width: 490px) {
+  .estudios__gris{
+    height: auto;
+  }
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+  }
+  .copyright {
+    color: black;
+    text-align: center;
+  }
+}
 }
