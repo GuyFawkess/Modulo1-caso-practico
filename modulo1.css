@@ -448,4 +448,5 @@ footer {
   height: 200px;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
