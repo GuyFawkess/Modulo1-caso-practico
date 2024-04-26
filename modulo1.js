@@ -69,6 +69,8 @@ sr.reveal(".form", {
   origin: "left",
   distance: "-100px",
 });
+
+// LA SECCION DEL APROBADO
 sr.reveal(".aprobado", {
   duration: 3000,
   origin: "top",
