@@ -122,6 +122,8 @@ nav a:hover {
   -webkit-text-stroke: 0.8px black;
   color: rgb(10, 99, 0);
   width: auto;
+  padding-left: 20px;
+  padding-bottom: 10px;
   border-radius: 10px;
   min-width: auto;
   backdrop-filter: blur(8px);
@@ -180,7 +182,7 @@ nav a:hover {
 .estudios__gris {
   background-image: url(./imagenes/grey-pattern.png);
   height: 370px;
-  width: 42%;
+  width: 40%;
   min-width: 42%;
   left: -170px;
   flex-shrink: 0;
@@ -193,6 +195,11 @@ nav a:hover {
   flex-wrap: wrap;
   align-content: space-around;
   font-size: 24px;
+}
+.estudios__gris p {
+  width: 100%;
+  padding-left: 30px;
+
 }
 
 .estudios__gris h1 {
